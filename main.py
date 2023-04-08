@@ -45,7 +45,7 @@ try:
         connection.login(user=MY_EMAIL, password=MY_PASSWORD)
         for name, email in zip(bday_names_list, bday_emails_list):
             random_letter = choice(all_letters)
-            letter = '\n'.join([line.replace('Angela', 'Nika').replace('[NAME]', name) for line in random_letter])
+            letter = '\n'.join([line.replace('[NAME]', name) for line in random_letter])
             connection.sendmail(
                 from_addr=MY_EMAIL,
                 to_addrs=f'{email}',
